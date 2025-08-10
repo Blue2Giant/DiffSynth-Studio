@@ -1,0 +1,26 @@
+exp_tag: sd35large_one_step_gan_image_restoration
+
+ram_path: /mnt/media01/dataset/media_algo_share/xiangfeng/aigc_pretrained/recognize_anything_model/ram_swin_large_14m.pth
+qwen_path: /mnt/media01/dataset/media_algo_share/xiangfeng/aigc_pretrained/Qwen2.5-VL-7B-Instruct
+pretrained_ckpt_path_gen: ~
+pretrained_ckpt_path_dis: ~
+
+learning_rate: !!float 5e-5
+learning_rate_dis: !!float 1e-5
+accumulate_grad_batches: 25
+max_epochs: 20
+use_gradient_checkpointing: True
+viz_iters: 2
+save_ckpt_iters: 50
+relaxed_mean_size: 100
+
+rgb_w: 1.0
+lpips_w: 2.0
+gan_type: lsgan
+gan_loss_weight: 0.1
+real_label_val: 1.0
+fake_label_val: -1.0
+d_iters: 1 # rec: 1~5
+r1_regularization: 25
+r2_regularization: 25
+variance: 0.002
