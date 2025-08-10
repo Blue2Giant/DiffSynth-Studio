@@ -1,0 +1,23 @@
+exp_tag: flux_kontext_one_step_gan_image_restoration
+
+ram_path: /mnt/media01/dataset/media_algo_share/xiangfeng/aigc_pretrained/recognize_anything_model/ram_swin_large_14m.pth
+qwen_path: /mnt/media01/dataset/media_algo_share/xiangfeng/aigc_pretrained/Qwen2.5-VL-7B-Instruct
+pretrained_ckpt_path_gen: ~ #/mnt/media01/dataset/media_algo_share/xiangfeng/repos/diffsynth-studio/experiments/flux_kontext_one_step_gan_image_restoration/20250707-141127/checkpoints/net_gen_iter_9001.pth
+pretrained_lora_path_dis: ~
+
+learning_rate: !!float 5e-5
+learning_rate_dis: !!float 2e-5
+accumulate_grad_batches: 1
+max_epochs: 20
+use_gradient_checkpointing: True
+
+rgb_w: 1.0
+lpips_w: 1.0
+gan_type: vanilla # vanilla lsgan
+gan_loss_weight: 0.2
+gan_loss_weight2: 1.0
+real_label_val: 1.0
+fake_label_val: 0.0
+d_iters: 1 # rec: 1~5
+r1_regularization: 50
+variance: 0.001
