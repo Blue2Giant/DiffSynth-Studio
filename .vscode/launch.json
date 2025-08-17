@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Wan2.1-T2V-1.3B.py",
+        "type": "python",
+        "request": "launch",
+        "program": "examples/wanvideo/model_inference/Wan2.1-T2V-1.3B.py",
+        "cwd": "/inspire/hdd/global_user/yeziqi-240108100047/ljh/DiffSynth-Studio",
+        "console": "internalConsole",
+        "justMyCode": false,
+        "args": [
+          // 在这里填脚本需要的命令行参数，例如：
+          // "--config", "xxx.yaml"
+        ],
+        "env": {
+          // 在这里设置必要的环境变量，例如：
+          // "CUDA_VISIBLE_DEVICES": "0,1,2,3"
+        },
+        // "envFile": "${workspaceFolder}/.env"   // 如需从 .env 读取环境变量可保留
+      }
+    ]
+  }
+  
